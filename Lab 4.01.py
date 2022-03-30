@@ -39,7 +39,20 @@ count_vowels takes in a string and returns an int representing the number of vow
 
 Can you think of an alternate way to do complete this task without any loop or counter, by making use of your new de_vowel() function instead?
 '''
+# Removes all lower case vowels from a string and returns a copy of the de-voweld string
+def de_vowel(word):
+    vowels = ['a','e','i','o','u','A','E','I','O','U']
+    for letter in vowels:
+        word = word.replace(letter,"")
+    print(word)
+de_vowel('apple')
+        
+        
 
-list_of_numbers = [3, 5, 10, 23]
-for num in list_of_numbers:
-    print(f"num is {num}")
+
+
+
+
+
+
+
