@@ -45,8 +45,18 @@ def de_vowel(word):
     for letter in vowels:
         word = word.replace(letter,"")
     print(word)
-de_vowel('apple')
-        
+
+# Counts the number of vowels in a word
+def count_vowels(word):
+    vowels = ['a','e','i','o','u','A','E','I','O','U']
+    counter = 0
+    for i in range(9):
+        if vowels[i] in word:
+            counter += 1
+    print(counter)
+
+# For an alternate method, use the length of the word - the de_voweled word
+
         
 
 
