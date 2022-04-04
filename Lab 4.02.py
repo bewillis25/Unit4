@@ -85,3 +85,46 @@ Extension
 Create a function reverse_strings_in_list. This function will input a list of strings you want to reverse. 
 The function will reverse the strings in the list by calling the my_reverse function in a loop.
 '''
+
+# Takes in a word list and pluralizes each word
+def pluralize_words(word_list):
+    new_list = []
+    for item in word_list:
+        if item[-1] != 'y':
+            new_list.append(item + 's')
+        else:
+            new_item = item.replace("y","ies")
+            new_list.append(new_item)
+    print(new_list)
+fruit_list = ['apple', 'berry','melon']
+pluralize_words(fruit_list)
+
+
+# Takes in a string moves the nth letter to the len(string)-n position (a negative means go backward, as in list indexing)
+def my_reverse(word):
+    # First argument in slice is the starting point, which is the last item of the string
+    # Then, the slice goes backward one position and repeats until it gets to the stopping point, the second argument, which it will stop BEFORE
+    # So, it will stop before [-6], i.e. end with [0] which is the first item of the string
+    return word[len(word)-1:-len(word)-1:-1]
+
+# Takes in a list with strings that will be reversed
+def reverse_strings_in_list(string_list):
+    new_list = []
+    for item in string_list:
+        new_list.append((my_reverse(item)))
+    print(new_list)
+fruit_list = ['milk', 'berry','melon']
+reverse_strings_in_list(fruit_list)
+
+
+
+
+
+
+
+
+
+
+
+
+
